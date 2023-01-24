@@ -20,7 +20,7 @@ function onDutyWeaponSheriff()
         SetPedWeaponTintIndex(ped, GetHashKey("weapon_stungun"), 2)
 end
 
-RegisterCommand('onduty', function(source, args, user)
+RegisterCommand('onduty', function(source, args)
     if args[1] == "police" then
         TriggerClientEvent(onDutyWeaponPolice())
     elseif args[1] == "sheriff" then
@@ -28,7 +28,7 @@ RegisterCommand('onduty', function(source, args, user)
     end
 end, false)
 
-RegisterCommand('givewc', function (source, args, user)
+RegisterCommand('givewc', function (source, args)
     GiveWeaponComponentToPed(ped, weapon, GetHashKey(args[1]))
 end)
 
